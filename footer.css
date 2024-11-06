@@ -1,0 +1,32 @@
+.footer {
+    position: fixed;       /* Keeps the footer fixed on the screen */
+    bottom: 0;             /* Aligns the footer at the bottom */
+    left: 0;               /* Aligns the footer with the left side */
+    width: 10%;           /* Makes the footer occupy the full width of the screen */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;   /* Vertically centers the content */
+    height: 22vh;          /* Adjust the height of the footer */
+    display: flex;         /* Use flexbox for layout */
+    flex-direction: column;   /* Align icons in a row */
+    gap: 10px;             /* Gap between the social media icons */
+    
+} 
+
+.footer a {
+    display: inline-block;
+    width: 35px;           /* Width of each icon */
+    height: 35px;          /* Height of each icon */
+    margin: 0;             /* Remove unnecessary margins */
+}
+
+.footer img {
+    width: 100%;           /* Make the images fit the parent size */
+    height: auto;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the rotation */
+}
+
+.footer a:hover img {
+    transform: rotate(360deg); /* Rotate the image 360 degrees on hover */
+}
+
+

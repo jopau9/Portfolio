@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> <!--El head conte dades del document, com el CSV, el JavaScript... -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JoanPau Rahola's Portfolio | Developer & Programer</title>
+        <link rel="icon" href="Imatges/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="curriculum-styles.css"> <!-- Aquí enllaçarem el CSS més tard -->
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+
+        <script src="translationsCurriculum.js"></script>
+    
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- Header Placeholder (is used to dynamically insert content)-->
+        <div id="header-placeholder"></div>
+
+        <div class="frontPage">
+            <div class="title">
+                <p>Estudiant d'Enginyeria Informàtica centrat en disseny de software, programació i gestió de sistemes.</p>
+            </div>
+            <a href="index.html"><img class="logo-image" src="Imatges/profileImage.jpg" alt="Logo"></a>
+        </div> 
+
+        
+        <div class="information">
+            <div class="div1"> 
+                <hr class="header">
+                <h2>About</h2>
+            </div>
+            
+            <div class="div2">
+                <h3>Formació</h3>
+            </div>
+
+            <div class="div3"> 
+                <p>Actualment estic cursant el tercer any del Grau en Enginyeria Informàtica a la 
+                    Universitat de Girona, on he aconseguit una nota mitjana de 7,1 fins ara. Anteriorment, 
+                    vaig completar el Batxillerat a Montjuïc Girona International School, obtenint una nota final de 8,62.</p>
+            </div>
+            
+            <div class="div4"> 
+                <hr class="content">
+                <h3>Aptituds</h3>
+            </div>
+
+            <div class="div5"> 
+                <p>Tinc una sòlida capacitat per treballar en equip i destaco en la comunicació efectiva. M'adapto fàcilment 
+                    als desafiaments gràcies a la meva habilitat en la resolució de problemes i l'aprenentatge continu. Gestiono 
+                    eficaçment el meu temps i sempre aplico el pensament crític en les meves tasques.</p>
+            </div>
+            <div class="div6">
+                <hr class="content">
+                <h3>Idiomes</h3>
+            </div>
+            
+            <div class="div7"> 
+                <p>Parlo català i espanyol com a llengües maternes. El meu nivell d'anglès és mitjà, i també tinc certificació de nivell A2 en francès.</p>
+            </div>
+            
+            <div class="div8"> 
+                <hr class="header">
+                <h2>Habilitats</h2>
+            </div>
+            
+            <div class="div9"> 
+                <h3>Competencies professionals</h3>
+            </div>
+
+            <div class="div10"> 
+                <p>Inclou rols com desenvolupador de programari junior, tècnic de suport informàtic, analista de 
+                    bases de dades junior, assistent d'enginyeria del software, practicant en empresa de tecnologia, i analista de sistemes.</p>
+            </div>
+            
+            <div class="div11"> 
+                <hr class="content">
+                <h3>Coneixements tècnics</h3>
+            </div>
+
+            <div class="div12"> 
+                <p>Domino llenguatges de programació com C++, Java, MIPS, C#, VHDL, i Python. A més, utilitzo eines de desenvolupament com R Studio, GTK Wave, i MATLAB.</p>
+            </div>
+
+        </div>
+        <div class="dw-button-container">
+            <a target="_blank" href="Files/CV_JoanPau_Rahola.pdf" class="dw-button">
+                <span class="button__text">Download CV</span>
+                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+            </a>
+        </div>        
+
+
+
+        <div id="footer-placeholder"></div>
+        <script>
+            // Load Header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+
+                    // Afegeix aquí el codi per inicialitzar els esdeveniments del header
+                    document.querySelector('.dropdown-toggle').addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        document.querySelector('.language-dropdown').classList.toggle('show');
+                    });
+                    // Configura l'idioma inicial a anglès
+                    changeLanguage('en', 'Imatges/flags/Angles.svg');
+                });
+
+            // Load Footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    // No cal afegir res al footer si no tens esdeveniments allà
+                });
+
+            // Tanca el menú si fas clic fora d'ell
+            document.addEventListener('click', function(event) {
+                const dropdown = document.querySelector('.language-dropdown');
+                if (dropdown && !dropdown.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        </script>
+    </body>
+</html>

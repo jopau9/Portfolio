@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "PolySans Neutral Wide";
+    src: url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.eot");
+    src: url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.svg#PolySans Neutral Wide")format("svg");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(76,76,76);
+    background: radial-gradient(circle, rgba(76,76,76,1) 0%, rgba(21,19,19,1) 100%);
+    color: #fff;
+
+    color:#DDDDDD ;
+
+    font-family: "Roboto", sans-serif;
+}
+
+.frontPage{
+    font-family: "PolySans Neutral Wide";
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 12vh;
+}
+
+.frontPage p{
+    font-size: 3.8rem;
+} 
+
+.frontPage a{
+    filter: grayscale(70%);
+    z-index: -1;
+}
+
+.frontPage img{
+    width: 320px;
+    border-radius: 15px;
+
+}
+
+.information h2, h3{
+    font-family: "PolySans Neutral Wide";
+    color: #DDDDDD;
+}
+
+.information h2{
+    font-size: 2rem;
+}
+
+.information h3{
+    margin-left: 20%;
+    font-size: 1.2rem;
+    padding-top: 20px;
+}
+
+p{
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+
+
+.information {
+
+    height: 100vh;
+    margin-top: 13vh;
+    padding-left: 35vh;
+    padding-right: 30vh;
+
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    gap: 50px;
+
+    margin-left: -150px;
+}
+
+hr.header {
+    position: absolute;
+    border: none;
+    border-top: 1px solid rgb(255, 255, 255); /* Customize the color and thickness */
+    width: calc(75%); /* 100% width minus 50px space on the right */
+    margin-right: 50px; /* Space between the end of the line and the right side of the screen */
+}
+
+hr.content {
+    position: absolute;
+    border: none;
+    border-top: 1px solid rgb(255, 255, 255); /* Customize the color and thickness */
+    width: calc(63%); /* 100% width minus 50px space on the right */
+    margin-right: 50px; /* Space between the end of the line and the right side of the screen */
+}
+
+hr {
+
+}
+
+.div1{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3{
+    grid-area: 1 / 3 / 2 / 4;
+}
+.div4{
+    grid-area: 2 / 2 / 3 / 3;
+}
+.div5{
+    grid-area: 2 / 3 / 3 / 4;
+}
+.div6{
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.div7{
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.div8{
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.div9{
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.div10{
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.div11{
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.div12{
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.dw-button-container{
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 10vh;
+    margin-bottom: 10vh;
+}
+
+.dw-button {
+    --main-focus: #2d8cf0;
+    --font-color: #cacaca;
+    --bg-color-sub: #616161;
+    --bg-color: #494949;
+    --main-color: #323232;
+    position: absolute;
+    width: 148px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .dw-button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .dw-button .button__text {
+    transform: translateX(8px);
+    color: var(--font-color);
+    font-weight: 600;
+  }
+  
+  .dw-button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dw-button .svg {
+    width: 20px;
+    fill: var(--main-color);
+  }
+  
+  .dw-button:hover {
+    background: var(--bg-color);
+  }
+  
+  .dw-button:hover .button__text {
+    color: transparent;
+  }
+  
+  .dw-button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .dw-button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+  }
+  
+
+
+

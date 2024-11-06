@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoanPau Rahola's Portfolio | Developer & Programer</title>
+    <script src="translationsIndex.js"></script>
+
+    <link rel="icon" href="Imatges/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+    <body>
+        <!-- Header Placeholder (is used to dynamically insert content)-->
+        <div id="header-placeholder"></div>
+
+        <div class="container">
+            <div class="intro">I AM</div>
+            <div class="name">JOANPAU</div>
+            <div class="role">
+                <!--IMATGE FLEXA grater-than-->
+                <div class="role-img">
+                    <img src="Imatges/grater-than.png" >
+                </div>
+                <div class="role-text">
+                    <span class="junior">A JUNIOR</span>
+                    <span class="developer">SOFTWARE DEVELOPER</span>
+                </div>
+            </div>
+
+            <a href="index.html#curriculum" class="arrow">
+                <div class="arrow-top"></div>
+                <div class="arrow-bottom"></div>
+            </a>
+        </div>
+
+        <div id="curriculum" class="section">
+            <h2>Treballem junts</h2>
+            <!-- Skill container -->
+             <div>
+                
+                <div class="skill-container">
+                    <div class="skill-text">
+                        <h3>Skills que reflecten l'aprenentatge</h3>
+                        <p>Compromès amb l'aprenentatge continu i motivat per aportar en projectes tecnològics, busco col·laborar amb equips multidisciplinaris 
+                            per desenvolupar solucions creatives i eficients. Amb una base sòlida en Enginyeria Informàtica, tinc habilitats en programació, 
+                            gestió de bases de dades i anàlisi de sistemes, preparat per afrontar reptes tècnics i impulsar la innovació.
+                        </p>
+                        <div class="text-gran">
+                            <h1>3</h1>
+                            <p>Anys d'aprenentatge <br>i Desenvolupament</p>
+                        </div>
+                        <div class="curriculum-button">
+                            <a href="curriculum.html" class="button">View My Curriculum</a>
+                        </div>
+                    </div>
+                    <div class="skill-flex">
+                        <div class="div1">
+                            <img class="logo-img" src="Imatges/skills/c++.png"></a>
+                            <h3>C++</h3>
+                        </div>
+                        <div class="div3">
+                            <img class="csharplogo-img" src="Imatges/skills/csharp.png"></a>
+                            <h3>C#</h3>
+                        </div>
+                        <div class="div2">
+                            <img class="logo-img" src="Imatges/skills/java.png"></a>
+                            <h3>JAVA</h3>
+                        </div>
+                        <div class="div4">
+                            <img class="mysqllogo-img" src="Imatges/skills/mysql.png"></a>
+                            <h3>MySQL</h3>
+                        </div>
+                        <div class="div5">
+                            <img class="pythonlogo-img" src="Imatges/skills/python.png"></a>
+                            <h3>Python</h3>
+                        </div>
+                        <div class="div6">
+                            <img class="logo-img" src="Imatges/skills/HTML.png"></a>
+                            <h3>HTML</h3>
+                        </div>
+                    </div> 
+                </div>
+             </div>
+            
+            <!----------->
+            
+            </div>
+        </div>
+        <!-- Espai personal per mi mes endevant... Per aixo esta comentat.
+        <div id="projects" class="section">Projectes
+            <p>Descripció dels projectes aquí...</p>
+        </div>
+        <div id="contact" class="section">Contacte
+            <p>Informació de contacte aquí...</p>
+        </div>
+        -->
+        <!-- Footer Placeholder (is used to dynamically insert content)-->
+        <div id="footer-placeholder"></div>
+
+        <script>
+            // Load Header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+
+                    // Afegeix aquí el codi per inicialitzar els esdeveniments del header
+                    document.querySelector('.dropdown-toggle').addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        document.querySelector('.language-dropdown').classList.toggle('show');
+                    });
+                    // Configura l'idioma inicial a anglès
+                    changeLanguage('en', 'Imatges/flags/Angles.svg');
+                });
+
+            // Load Footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    // No cal afegir res al footer si no tens esdeveniments allà
+                });
+
+            // Tanca el menú si fas clic fora d'ell
+            document.addEventListener('click', function(event) {
+                const dropdown = document.querySelector('.language-dropdown');
+                if (dropdown && !dropdown.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        </script>
+    </body>
+</html>
