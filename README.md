@@ -58,6 +58,6 @@ The site was coded with HTML and CSS, with JavaScript used to dynamically load t
 
 ## Public Link
 
-https://jopau9.github.io/Porfolio/
+[https://jopau9.github.io/Porfolio/](https://jopau9.github.io/Portfolio/)
 
 This GitHub Pages link provides access to the live site, allowing potential employers and collaborators to explore my portfolio easily. This project showcases my dedication to professionalism and technical skills in a polished, accessible format.
